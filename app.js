@@ -94,7 +94,8 @@ rl.on('close', () => {
     // Map の キーと値が要素になった rankingArray 配列を
     // 要素 [key, value] として受け取り、それを文字列に変換する
     const rankingStrings = rankingArray.map(([key, value]) => {
-        return key + ': ' + value.popu10 + ' => ' + value.popu15 + ' 変化率: ' + value.change;
+        return `${key} : ${value.popu10} => ${value.popu15} 変化率: ${value.change}`;
+        // return key + ': ' + value.popu10 + ' => ' + value.popu15 + ' 変化率: ' + value.change;
     });
     console.log(rankingStrings);
 });
